@@ -1,0 +1,379 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>详情</title>
+<link rel="stylesheet" href="/gbes/resources/css/base.css"></link>
+<link href="/gbes/resources/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="/gbes/resources/css/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<link href="/gbes/resources/bootstrap/css/bootstrap-responsive.min.css"/>
+<link rel="stylesheet" type="text/css" href="/gbes/resources/css/jquery-ui.css" />
+<link href="/gbes/resources/css/index.css"type="text/css" rel="stylesheet"/>
+<link href="/gbes/resources/css/home.css"type="text/css" rel="stylesheet"/>
+<link href="/gbes/resources/css/list.css"type="text/css" rel="stylesheet" />
+<link href="/gbes/resources/css/left.css" type="text/css" rel="stylesheet"></link>
+<link href="/gbes/resources/css/right.css" type="text/css" rel="stylesheet"></link>
+<link rel="stylesheet" type="text/css" href="/gbes/resources/css/button.css"></link>
+<link href="/gbes/resources/images/title_logo.gif" type="image/x-icon" rel="shortcut icon" />
+
+<script src="/gbes/resources/js/jquery.min.js" type="text/javascript"></script>
+<script src="/gbes/resources/bootstrap/js/bootstrap.js"></script>
+<script src="/gbes/resources/js/pager.js" type="text/javascript"></script>
+<script src="/gbes/resources/js/jquery-ui-datepicker.js"></script>
+<script type="text/javascript">
+
+Date.prototype.format =function(format)
+    {
+        var o = {
+        "M+" : this.getMonth()+1, //month
+		"d+" : this.getDate(),    //day
+		"h+" : this.getHours(),   //hour
+		"m+" : this.getMinutes(), //minute
+		"s+" : this.getSeconds(), //second
+		"q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+		"S" : this.getMilliseconds() //millisecond
+        }
+        if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+        (this.getFullYear()+"").substr(4- RegExp.$1.length));
+        for(var k in o)if(new RegExp("("+ k +")").test(format))
+        format = format.replace(RegExp.$1,
+        RegExp.$1.length==1? o[k] :
+        ("00"+ o[k]).substr((""+ o[k]).length));
+        return format;
+    }
+</script>
+
+</head>
+<body>
+    <div class="header">
+		<script src="/gbes/resources/page/jnjs/common/header.js" type="text/javascript"></script>
+<script src="/gbes/resources/page/common/Util.js" type="text/javascript"></script>
+<script>
+function shoucang() { 
+	var sTitle = "重庆市绿色建筑与建筑节能综合管理平台";
+	var sURL = window.location.href;
+//	console.log(window.location.href);
+	try{ 
+		window.external.AddFavorite(sURL, sTitle); 
+	}catch(e){ 
+			try{ 
+				window.sidebar.addPanel(sTitle, sURL, ""); 
+			}catch(e){ 
+				alert("加入收藏失败，请使用Ctrl+D进行添加"); 
+			} 
+	} 
+} 
+</script>
+<!--<div class="full-title-bg"></div>-->
+<div class="title-div-b title-div-b1" >
+<span style="color:#2D916C; width:800px; position:relative; height:80px; z-index:1;font-size: 40px;  left:220px;top:90px;  font-weight:bold;-webkit-text-stroke: 1px white;
+	text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+	-webkit-background-clip : text; display: block; ">重庆绿色建筑与建筑节能综合管理平台</span>
+	<a href="javascript:void(0);" onClick="shoucang()"><span class="header-collect">加入收藏夹</span></a>
+	<a href="/gbes/zhxx/home"><span class="header-first-page">设为首页</span></a>
+</div>
+<div class="title-div">
+</div>
+<!--content-->
+<div class="content_div-header"  >
+	<div class="position_div">
+		<div class="position">
+			<img src="/gbes/resources/images/position_tips.png"/>
+			<span class="position_span">当前位置：</span>
+			<span class="n_position"><a href="/gbes/zhxx/home">首页 </a>
+																																				>性能认定公示</span>
+		</div> 
+	</div>
+	<div class="blank"></div>
+</div><!--end content-->
+<style>
+.no-height{
+display: none;
+}
+</style>	</div>
+	<div class="bodycontent" >
+		<div class="left">
+			<script type="text/javascript">
+$(document).ready(function () {
+	 $(".panel-title a").click(function(){
+		 $(".panel-title a").removeClass("colsetip");
+	});
+	if('性能认定公示'=='文件通知')
+	{
+		$(".panel-body ul li:eq(2)").addClass("even");
+	}
+	else if('性能认定公示'=='办事指南')
+	{
+		$(".panel-body ul li:eq(3)").addClass("even");
+	}
+	else if('性能认定公示'=='表格下载')
+	{
+		$(".panel-body ul li:eq(4)").addClass("even");
+	}
+	else if('性能认定公示'=='性能认定公示'||'性能认定公示'=='公示公告'){
+		$(".panel-body ul li:eq(0)").addClass("even");
+	}else{
+		$(".panel-body ul li:eq(1)").addClass("even");
+	}
+});
+
+    
+
+
+function showcontent(type){
+	$(".panel-body ul li").removeClass("even");
+	if('zhxx'==""){
+		document.location.href="/gbes/zhxx/showmore?contenttype="+type;
+	}
+	else{
+		document.location.href="/gbes/zhxx/showmore?contenttype="+type;
+	}
+	
+}
+</script>
+<div class="pull-left" id="left" >
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="opentip">
+         公共信息
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <ul>
+			<li><a href="javascript:void(0)" onclick="showcontent('gsgg')">公示公告</a></li>
+			<li><a href="javascript:void(0)" onclick="showcontent('wjtz')">文件通知</a></li>
+			<li><a href="javascript:void(0)" onclick="showcontent('bszn')">办事指南</a></li>
+			<li><a href="javascript:void(0)" onclick="showcontent('bgxz')">资料下载</a></li>
+		</ul>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>	    </div>
+		<div class="content">
+			<script>
+$(document).ready(function(){
+		$("h3.h-center").each(function() {
+    	var datas = $(this).html().split("&nbsp;&nbsp;&nbsp;");
+		$(this).html($(this).html().replace("&nbsp;&nbsp;&nbsp;"+datas[1],"项目公示")+"</nobr>");
+    });
+		});
+</script>
+<div class="pull-right" id="right">
+	<div class="panel panel-default">
+		<div class="panel-heading panel-heading-small-height"><h3 class="h-center">关于对授予中科大厦和重庆会议展览馆二期等项目绿色建筑评价标识进行公示的通知</h3></div>
+		<div class="panel-body">
+			<p class="p-center">发布时间： [2019-08-21]&nbsp;&nbsp;点击数： 2011 </p>
+			<hr />
+			<div class="text" id="u65">
+				<div>
+					<div style="text-align: center">重庆市住房和城乡建设委员会<br />
+关于对授予中科大厦和重庆会议展览馆二期等项目绿色建筑评价标识进行公示的通知<br />
+&nbsp;</div>
+<br />
+有关单位：<br />
+　　根据《住房城乡建设部办公厅关于绿色建筑评价标识管理有关工作的通知》（建办科〔2015〕53号）和《重庆市绿色建筑评价标识管理办法（试行）》（渝建〔2011〕117号）等有关规定，经评审机构组织专家组进行评审，中科大厦和重庆会议展览馆二期等项目达到了国家和重庆市相应绿色建筑评价标识要求，拟授予相应星级国家绿色建筑评价标识和相应等级重庆市绿色建筑评价标识，现予以公示。<br />
+　　任何单位和个人对公示项目如有异议，请在公示之日起15个工作日内，向我委提出书面意见（个人意见需签署真实姓名、身份证号及联系方式，单位意见需加盖单位印章），并提供必要的证明材料，逾期不予受理。<br />
+　　联 系 人：市城乡建委建筑节能处 赵本坤<br />
+　　电 话：63672578 63766105（传真）<br />
+　　联系地址：重庆市渝中区长江一路58号<br />
+　　邮 编：400014<br />
+<br />
+　　附件：绿色建筑评价标识项目名单<br />
+<br />
+<div style="text-align: right">重庆市住房和城乡建设委员会<br />
+2019年08月13日<br />
+<br />
+&nbsp;</div>
+<div style="text-align: left">
+<div style="text-align: left; line-height: 20pt" align="left">附件</div>
+<div style="text-align: center; line-height: 20pt" align="center">绿色建筑评价标识项目名单</div>
+<div align="center">
+<table border="1" cellspacing="0" cellpadding="0" width="102%" style="border-bottom: medium none; border-left: medium none; margin: auto auto auto 16.85pt; width: 102.22%; border-collapse: collapse; border-top: medium none; border-right: medium none">
+    <thead>
+        <tr style="height: 39.95pt">
+            <td width="3%" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 3.46%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">编号</span></b></div>
+            </td>
+            <td width="13%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 13.36%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">项目名称</span></b></div>
+            </td>
+            <td width="19%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 19.44%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">申报单位</span></b></div>
+            </td>
+            <td width="9%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 9.62%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">建筑面积</span></b></div>
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">（万㎡）</span></b></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.82%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">建筑</span></b></div>
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">类型</span></b></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.76%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">标识</span></b></div>
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">类型</span></b></div>
+            </td>
+            <td width="8%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 8.58%; padding-right: 5.4pt; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">重庆市标识等级</span></b></div>
+            </td>
+            <td width="7%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 7.54%; padding-right: 0cm; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">对应国家标识星级</span></b></div>
+            </td>
+            <td width="11%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 11.58%; padding-right: 0cm; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">其配套室内车库达标情况</span></b></div>
+            </td>
+            <td width="14%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 14.82%; padding-right: 0cm; height: 39.95pt; border-top: windowtext 1pt solid; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><b><span style="color: #333333">评价依据标准</span></b></div>
+            </td>
+        </tr>
+        <tr style="height: 39.95pt">
+            <td width="3%" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 3.46%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center"><span style="color: #333333">1</span></div>
+            </td>
+            <td width="13%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 13.36%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">上东汇小区<span>F83-1地块项目（居住建筑部分）</span></div>
+            </td>
+            <td width="19%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 19.44%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: left; line-height: 18pt; layout-grid-mode: char" align="left"><span style="background: white; color: #212121">重庆怡置招商房地产开发有限公司</span></div>
+            </td>
+            <td width="9%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 9.62%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">8.03（含室内车库<span>2.10）</span></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.82%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">居住建筑</div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.76%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">设计标识</div>
+            </td>
+            <td width="8%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 8.58%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">金级</div>
+            </td>
+            <td width="7%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 7.54%; padding-right: 0cm; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">★★</div>
+            </td>
+            <td rowspan="4" width="11%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 11.58%; padding-right: 0cm; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="line-height: 20pt; layout-grid-mode: char">满足《重庆市绿色建筑室内车库技术要求》中<span>&ldquo;基本要求&rdquo;的相关规定，未满足&ldquo;更高要求&rdquo;的规定。</span></div>
+            </td>
+            <td rowspan="4" width="14%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 14.82%; padding-right: 0cm; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: left; line-height: 20pt; layout-grid-mode: char" align="left">按照国家《绿色建筑评价标准》<span>GB/T50378-2014和重庆市《绿色建筑评价标准》DBJ50/T-066-2014、重庆市《绿色建筑评价技术细则（试行）》（2015版）和《重庆市绿色建筑室内车库技术要求》评价。</span></div>
+            <div style="text-align: left; line-height: 20pt; layout-grid-mode: char" align="left">&nbsp;</div>
+            </td>
+        </tr>
+        <tr style="height: 68.15pt">
+            <td width="3%" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 3.46%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center"><span style="color: #333333">2</span></div>
+            </td>
+            <td width="13%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 13.36%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">首地悦来项目<span>（重庆首地人和街小学校）</span></div>
+            </td>
+            <td width="19%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 19.44%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: left; line-height: 18pt; layout-grid-mode: char" align="left"><span style="background: white; color: #212121">重庆首地房地产开发有限公司</span></div>
+            </td>
+            <td width="9%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 9.62%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">6.24（含室内车库<span>0.90）</span></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.82%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">公共建筑</div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.76%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">设计标识</div>
+            </td>
+            <td width="8%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 8.58%; padding-right: 5.4pt; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">金级</div>
+            </td>
+            <td width="7%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 7.54%; padding-right: 0cm; height: 68.15pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">★★</div>
+            </td>
+        </tr>
+        <tr style="height: 84.05pt">
+            <td width="3%" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 3.46%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center"><span style="color: #333333">3</span></div>
+            </td>
+            <td width="13%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 13.36%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">中科大厦</div>
+            </td>
+            <td width="19%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 19.44%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: left; line-height: 18pt; layout-grid-mode: char" align="left"><span style="background: white; color: #212121">重庆晨升房地产开发有限公司</span></div>
+            </td>
+            <td width="9%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 9.62%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">3.82（含室内车库<span>0.39）</span></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.82%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">公共建筑</div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.76%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">设计标识</div>
+            </td>
+            <td width="8%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 8.58%; padding-right: 5.4pt; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">铂金级</div>
+            </td>
+            <td width="7%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 7.54%; padding-right: 0cm; height: 84.05pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">★★★</div>
+            </td>
+        </tr>
+        <tr style="height: 39.95pt">
+            <td width="3%" style="border-bottom: windowtext 1pt solid; border-left: windowtext 1pt solid; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 3.46%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center"><span style="color: #333333">4</span></div>
+            </td>
+            <td width="13%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 13.36%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">重庆会议展览馆二期</div>
+            </td>
+            <td width="19%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 19.44%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: left; line-height: 18pt; layout-grid-mode: char" align="left"><span style="background: white; color: #212121">重庆悦来投资集团有限公司</span></div>
+            </td>
+            <td width="9%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 9.62%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">3.63（含室内车库<span>0.86）</span></div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.82%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">公共建筑</div>
+            </td>
+            <td width="5%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 5.76%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">竣工标识</div>
+            </td>
+            <td width="8%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 5.4pt; width: 8.58%; padding-right: 5.4pt; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt" align="center">铂金级</div>
+            </td>
+            <td width="7%" style="border-bottom: windowtext 1pt solid; border-left: #f0f0f0; padding-bottom: 0cm; background-color: transparent; padding-left: 0cm; width: 7.54%; padding-right: 0cm; height: 39.95pt; border-top: #f0f0f0; border-right: windowtext 1pt solid; padding-top: 0cm">
+            <div style="text-align: center; line-height: 20pt; layout-grid-mode: char" align="center">★★★</div>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+<div style="text-align: left; line-height: 20pt" align="left">&nbsp;</div>
+<br />
+&nbsp;</div>
+				</div>
+				<div style="margin-top:30px">
+									</div>
+			</div>
+		</div>
+	</div>
+</div>	    </div>
+	</div>
+	<div class="clear"></div>
+	<div id="filediv" class="filediv" style="display:none;"></div>
+	<div class="footer">
+		<div class="blank"></div>
+<div class="blank"></div>
+<div class="footer_div">
+<p>技术支持：重庆市建设信息中心&nbsp;&nbsp;联系电话：63671020&nbsp;&nbsp;
+<img src="/gbes/resources/images/qq.png"/>QQ群：169141181</p>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("a[href='/gbes/zhxx|admin/index']").attr("href","/gbes/admin/index").attr("target","_blank");
+	});
+</script>    </div>
+</body>
+</html>
